@@ -1,0 +1,20 @@
+for viewing the pdf viewer okay :)
+
+import streamlit as st
+from streamlit_pdf_viewer import pdf_viewer
+
+# from streamlit_pdf_viewer import pdf_viewer
+
+
+container_pdf, container_chat = st.columns([100, 1])
+
+with container_pdf:
+    pdf_file = ""
+
+    if pdf_file:
+        binary_data = pdf_file.getvalue()
+        pdf_viewer(input=binary_data,
+                   width=700)
+
+
+--------------------------------------------------
